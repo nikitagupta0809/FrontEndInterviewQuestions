@@ -1,0 +1,8 @@
+===========================================================================================
+                        FREQUENTLY ASKED JS QUESTIONS
+===========================================================================================
+  
+  Q1. Given two input arrays, one containing the elements and the other containing the final index positions. You need to 
+  reposition the elements of the first array according the indexes in the second array. Also give the runtime complexity.
+  
+  
