@@ -1,0 +1,44 @@
+    =============================================================================================
+                        <!-- Here are some commonly asked CSS questions --->
+    =============================================================================================
+Q1. How will you position a child element to the right top of the parent element?
+A1. <style>
+      .parent{
+      background-color: blue;
+      height: 100px;
+      width: 100px;
+      position: relative;
+    }
+
+    .child{
+      background-color: yellow;
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+   </style>
+   
+   <div class = "parent">
+      I am the parent class.
+       <div class = "child">
+         I am the child class.
+       </div>
+    </div>
+    =============================================================================================
+Q2. How can you trigger the display of the child parent by hovering on the parent element?
+A2. <style>
+        #hidden{
+                display: none;
+              }
+        #parent:hover #hidden{
+                display: block
+              }
+    </style>
+      <div id="parent">
+        <h2> I am the parent.</h2>
+        <div id="hidden">
+        I am the child
+        </div> 
+      </div>
