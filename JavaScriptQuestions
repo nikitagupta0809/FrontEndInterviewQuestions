@@ -1,0 +1,58 @@
+//====== Q1. Function to input the current position of knight on a chessboard 
+//====== and returns the list of preliminary moves it could make ===================
+// assuming the leftmost bottom cell to be (0,0) and the right most top cell to be (7,7)
+function checkValid(x) 
+{
+    if (x >= 0 && x < 8)
+        return true;
+    else return false;
+}
+
+function knightMoves(curr_i, curr_j) 
+{
+    let possible_moves = []
+    let directions = [
+        [2, -1],
+        [2, 1],
+        [1, 2],
+        [-1, 2],
+        [-2, -1],
+        [-2, 1],
+        [1, -2],
+        [-1, -2]
+    ]
+    for (let i = 0; i < directions.length; i++) 
+    {
+        //console.log(directions[i])
+        newx = curr_i + directions[i][0];
+        newy = curr_j + directions[i][1];
+        let move = []
+        if (checkValid(newx) && checkValid(newy)) 
+        {
+            move.push(newx, newy)
+            possible_moves.push(move)
+        }
+    }
+    return possible_moves;
+}
+
+//testing the function:
+var y = knightMoves(5, 7)
+console.log(y)
+
+// ======= Q2. Function to print the Nth Fibonacci number =====================
+// ====== The series begins at index 0. // 1,1,2,3,5,8... ======================
+// ====== so, to get the first element, call fibonacci(0) ==========================
+function fibonacci(n) 
+{
+    if (n <= 1)
+        return 1;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+// testing the code:
+for (let i = 0; i < 10; i++) 
+{
+    var x = fibonacci(i)
+    console.log(i + " : " + x);
+}
